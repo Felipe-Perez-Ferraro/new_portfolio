@@ -21,6 +21,6 @@ export const colorDesigns = {
     subtitle: 'text-violet-300',
     paragraph: 'text-purple-600',
     text: 'text-purple-100',
-    border: 'border-purple-600',
+    border: 'border-purple-200',
   },
 };
