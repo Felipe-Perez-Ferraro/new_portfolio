@@ -3,6 +3,7 @@ import { colorDesigns } from '../colorDesigns';
 import Designs from './Designs';
 import Comeback from './Comeback';
 import languages from '../languages';
+import skills from '../skills';
 
 function Skills({ design, handleButtonClick }) {
   return (
@@ -10,7 +11,7 @@ function Skills({ design, handleButtonClick }) {
       className={`flex flex-col gap-10 justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Comeback design={colorDesigns[design]} />
-      <article className="flex flex-col mx-auto max-w-xs gap-5">
+      <article className="flex flex-col mx-auto max-w-xs gap-8">
         <div className="flex flex-col gap-4">
           <h2
             className={`text-center text-3xl uppercase font-black ${colorDesigns[design].title}`}
@@ -19,10 +20,33 @@ function Skills({ design, handleButtonClick }) {
           </h2>
           <div className="flex flex-wrap justify-center">
             {languages.map((lang) => (
-              <div key={lang.id} className="flex flex-col w-24 items-center p-1">
-                <h3 className={`text-2xl ${colorDesigns[design].paragraph}`}>{lang.icon}</h3>
-                <p className={`text-center ${colorDesigns[design].text}`}>{lang.name}</p>
+              <div
+                key={lang.id}
+                className="flex flex-col w-24 items-center p-1"
+              >
+                <h3 className={`text-2xl ${colorDesigns[design].paragraph}`}>
+                  {lang.icon}
+                </h3>
+                <p className={`text-center ${colorDesigns[design].text}`}>
+                  {lang.name}
+                </p>
               </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <h2
+            className={`text-center text-3xl uppercase font-black ${colorDesigns[design].title}`}
+          >
+            Skills
+          </h2>
+          <div className="flex flex-col flex-wrap">
+            {skills.map((skill) => (
+              <ul key={skill.id} className="flex flex-col p-1">
+                <li className={`text-lg text-center ${colorDesigns[design].paragraph}`}>
+                  {skill.skill}
+                </li>
+              </ul>
             ))}
           </div>
         </div>
