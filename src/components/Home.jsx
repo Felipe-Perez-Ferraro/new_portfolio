@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { colorDesigns } from '../colorDesigns';
 import Links from './Links';
 import Designs from './Designs';
 import Social from './Social';
 
-function Home() {
-  const [design, setDesign] = useState('designOne');
-
-  const handleButtonClick = (designObject) => {
-    setDesign(designObject);
-  };
-
+function Home({ design, handleButtonClick }) {
   return (
-    <main
+    <section
       className={`flex justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Links design={colorDesigns[design]} />
@@ -36,7 +30,7 @@ function Home() {
           <Designs handleButtonClick={handleButtonClick} />
         </div>
       </article>
-    </main>
+    </section>
   );
 }
 
