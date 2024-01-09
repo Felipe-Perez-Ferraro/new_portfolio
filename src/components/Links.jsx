@@ -11,19 +11,19 @@ function Links({ design }) {
       </Link>
       <Link
         className={`w-32 text-center absolute top-1 right-1 border ${design.border} px-2 py-1 rounded text-lg font-bold ${design.paragraph}`}
-        to="about"
+        to="projects"
       >
         Projects
       </Link>
       <Link
         className={`w-32 text-center absolute bottom-1 left-1 border ${design.border} px-2 py-1 rounded text-lg font-bold ${design.paragraph}`}
-        to="about"
+        to="education"
       >
         Education
       </Link>
       <Link
         className={`w-32 text-center absolute bottom-1 right-1 border ${design.border} px-2 py-1 rounded text-lg font-bold ${design.paragraph}`}
-        to="about"
+        to="skills"
       >
         Skills
       </Link>
