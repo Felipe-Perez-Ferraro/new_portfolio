@@ -9,7 +9,7 @@ function Education({ design, handleButtonClick }) {
       className={`flex flex-col gap-10 justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Comeback design={colorDesigns[design]} />
-      <article className='flex flex-col mx-auto max-w-xs gap-5'>
+      <article className="flex flex-col mx-auto max-w-xs gap-5">
         <div
           className={`flex flex-col gap-1 border ${colorDesigns[design].border} p-2 rounded`}
         >

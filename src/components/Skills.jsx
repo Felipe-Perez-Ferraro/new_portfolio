@@ -43,7 +43,9 @@ function Skills({ design, handleButtonClick }) {
           <div className="flex flex-col flex-wrap">
             {skills.map((skill) => (
               <ul key={skill.id} className="flex flex-col p-1">
-                <li className={`text-lg text-center ${colorDesigns[design].paragraph}`}>
+                <li
+                  className={`text-lg text-center ${colorDesigns[design].paragraph}`}
+                >
                   {skill.skill}
                 </li>
               </ul>

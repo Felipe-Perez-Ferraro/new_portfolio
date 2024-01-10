@@ -16,11 +16,36 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home design={design} handleButtonClick={handleButtonClick} />} />
-        <Route path='/about' element={<About design={design} handleButtonClick={handleButtonClick} />} />
-        <Route path='/projects' element={<Projects design={design} handleButtonClick={handleButtonClick} />} />
-        <Route path='/education' element={<Education design={design} handleButtonClick={handleButtonClick} />} />
-        <Route path='/skills' element={<Skills design={design} handleButtonClick={handleButtonClick} />} />
+        <Route
+          path="/"
+          element={
+            <Home design={design} handleButtonClick={handleButtonClick} />
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <About design={design} handleButtonClick={handleButtonClick} />
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <Projects design={design} handleButtonClick={handleButtonClick} />
+          }
+        />
+        <Route
+          path="/education"
+          element={
+            <Education design={design} handleButtonClick={handleButtonClick} />
+          }
+        />
+        <Route
+          path="/skills"
+          element={
+            <Skills design={design} handleButtonClick={handleButtonClick} />
+          }
+        />
       </Routes>
     </Router>
   );

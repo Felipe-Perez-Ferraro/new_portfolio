@@ -6,7 +6,7 @@ export const colorDesigns = {
     paragraph: 'text-amber-400',
     text: 'text-teal-100',
     border: 'border-amber-400',
-    linkBg: 'bg-teal-900'
+    linkBg: 'bg-teal-900',
   },
   designTwo: {
     background: 'bg-orange-100',
@@ -15,7 +15,7 @@ export const colorDesigns = {
     paragraph: 'text-orange-950',
     text: 'text-amber-800',
     border: 'border-orange-950',
-    linkBg: 'bg-amber-200'
+    linkBg: 'bg-amber-200',
   },
   designThree: {
     background: 'bg-violet-950',
@@ -24,6 +24,6 @@ export const colorDesigns = {
     paragraph: 'text-purple-600',
     text: 'text-purple-100',
     border: 'border-purple-200',
-    linkBg: 'bg-purple-900'
+    linkBg: 'bg-purple-900',
   },
 };

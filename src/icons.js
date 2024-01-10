@@ -1,6 +1,13 @@
-import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const linkedin = <FontAwesomeIcon icon={faLinkedin} />;
 export const github = <FontAwesomeIcon icon={faGithub} />;

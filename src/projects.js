@@ -10,7 +10,7 @@ const projects = [
     pairProgramming: false,
     tech: ['css', 'javascript', 'webpack'],
     img: toDoImg,
-    githubLink: 'https://github.com/Felipe-Perez-Ferraro/ToDo_List'
+    githubLink: 'https://github.com/Felipe-Perez-Ferraro/ToDo_List',
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projects = [
     pairProgramming: false,
     tech: ['react', 'css'],
     img: bookstoreImg,
-    githubLink: 'https://github.com/Felipe-Perez-Ferraro/bookstore'
+    githubLink: 'https://github.com/Felipe-Perez-Ferraro/bookstore',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const projects = [
     pairProgramming: true,
     tech: ['react', 'redux', 'tailwindcss'],
     img: sptImg,
-    githubLink: 'https://github.com/DRT-DISABLED-ACCOUNT/re-spt'
+    githubLink: 'https://github.com/DRT-DISABLED-ACCOUNT/re-spt',
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const projects = [
     pairProgramming: true,
     tech: ['react', 'redux', 'ruby on rails'],
     img: boatImg,
-    githubLink: 'https://github.com/Felipe-Perez-Ferraro/final_capstone_front'
+    githubLink: 'https://github.com/Felipe-Perez-Ferraro/final_capstone_front',
   },
 ];
 
