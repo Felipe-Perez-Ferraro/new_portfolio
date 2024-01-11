@@ -2,6 +2,7 @@ import toDoImg from '../src/assets/todolist.png';
 import bookstoreImg from '../src/assets/bookstore.png';
 import sptImg from '../src/assets/space.png';
 import boatImg from '../src/assets/boat.png';
+import financialImg from '../src/assets/financial.png'
 
 const projects = [
   {
@@ -14,11 +15,11 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Bookstore',
+    name: 'Financial Insights',
     pairProgramming: false,
-    tech: ['react', 'css'],
-    img: bookstoreImg,
-    githubLink: 'https://github.com/Felipe-Perez-Ferraro/bookstore',
+    tech: ['react', 'tailwindcss', 'redux'],
+    img: financialImg,
+    githubLink: 'https://github.com/Felipe-Perez-Ferraro/REACT-Capstone-project',
   },
   {
     id: 3,
