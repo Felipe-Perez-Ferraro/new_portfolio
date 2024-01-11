@@ -1,5 +1,4 @@
 import toDoImg from '../src/assets/todolist.png';
-import bookstoreImg from '../src/assets/bookstore.png';
 import sptImg from '../src/assets/space.png';
 import boatImg from '../src/assets/boat.png';
 import financialImg from '../src/assets/financial.png'
