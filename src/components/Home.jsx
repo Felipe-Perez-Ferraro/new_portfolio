@@ -11,19 +11,19 @@ function Home({ design, handleButtonClick }) {
     >
       <Links design={colorDesigns[design]} />
       <article>
-        <h1 className={`font-bold text-4xl ${colorDesigns[design].title}`}>
+        <h1 className={`font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl ${colorDesigns[design].title}`}>
           Hello I'm
         </h1>
         <h2
-          className={`font-semibold text-3xl ${colorDesigns[design].subtitle}`}
+          className={`font-semibold text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${colorDesigns[design].subtitle}`}
         >
           <span className={`${colorDesigns[design].text}`}>F</span>elipe Perez
           Ferraro
         </h2>
-        <h3 className={`font-bold text-2xl ${colorDesigns[design].paragraph}`}>
+        <h3 className={`font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl ${colorDesigns[design].paragraph}`}>
           Full Stack Developer
         </h3>
-        <div className="my-5">
+        <div className="my-7">
           <Social design={colorDesigns[design]} />
         </div>
         <div className="flex justify-center mt-10 gap-3">

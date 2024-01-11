@@ -8,13 +8,13 @@ import skills from '../skills';
 function Skills({ design, handleButtonClick }) {
   return (
     <section
-      className={`flex flex-col gap-10 justify-center items-center h-screen ${colorDesigns[design].background}`}
+      className={`flex flex-col gap-20 justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Comeback design={colorDesigns[design]} />
-      <article className="flex flex-col mx-auto max-w-xs gap-8">
-        <div className="flex flex-col gap-4">
+      <article className="flex flex-col mx-auto max-w-xs md:max-w-md lg:max-w-lg xl:max-w-screen-xl xl:flex-row gap-8">
+        <div className="flex flex-col gap-4 xl:w-1/2">
           <h2
-            className={`text-center text-3xl uppercase font-black ${colorDesigns[design].title}`}
+            className={`text-center text-3xl xl:text-4xl uppercase font-black ${colorDesigns[design].title}`}
           >
             Languages
           </h2>
@@ -24,7 +24,7 @@ function Skills({ design, handleButtonClick }) {
                 key={lang.id}
                 className="flex flex-col w-24 items-center p-1"
               >
-                <h3 className={`text-2xl ${colorDesigns[design].paragraph}`}>
+                <h3 className={`text-2xl xl:text-3xl ${colorDesigns[design].paragraph}`}>
                   {lang.icon}
                 </h3>
                 <p className={`text-center ${colorDesigns[design].text}`}>
@@ -34,9 +34,9 @@ function Skills({ design, handleButtonClick }) {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 xl:w-1/2">
           <h2
-            className={`text-center text-3xl uppercase font-black ${colorDesigns[design].title}`}
+            className={`text-center text-3xl xl:text-4xl uppercase font-black ${colorDesigns[design].title}`}
           >
             Skills
           </h2>
@@ -44,7 +44,7 @@ function Skills({ design, handleButtonClick }) {
             {skills.map((skill) => (
               <ul key={skill.id} className="flex flex-col p-1">
                 <li
-                  className={`text-lg text-center ${colorDesigns[design].paragraph}`}
+                  className={`text-lg xl:text-xl text-center ${colorDesigns[design].text}`}
                 >
                   {skill.skill}
                 </li>

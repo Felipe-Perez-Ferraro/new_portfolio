@@ -9,17 +9,17 @@ function Education({ design, handleButtonClick }) {
       className={`flex flex-col gap-10 justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Comeback design={colorDesigns[design]} />
-      <article className="flex flex-col mx-auto max-w-xs gap-5">
+      <article className="flex flex-col mx-auto max-w-xs md:max-w-md lg:max-w-xl xl:max-w-screen-xl xl:flex-row gap-5">
         <div
-          className={`flex flex-col gap-1 border ${colorDesigns[design].border} p-2 rounded`}
+          className={`flex flex-col gap-1 border ${colorDesigns[design].border} p-2 rounded xl:w-96`}
         >
           <h2
-            className={`text-center text-3xl font-black uppercase mb-2 ${colorDesigns[design].title}`}
+            className={`text-center text-3xl lg:text-4xl font-black uppercase mb-2 ${colorDesigns[design].title}`}
           >
             School
           </h2>
           <h3
-            className={`text-xl font-semibold ${colorDesigns[design].subtitle}`}
+            className={`text-xl lg:text-2xl font-semibold ${colorDesigns[design].subtitle}`}
           >
             Escuela Argentina del Oeste
           </h3>
@@ -33,15 +33,15 @@ function Education({ design, handleButtonClick }) {
           </h4>
         </div>
         <div
-          className={`flex flex-col gap-1 border ${colorDesigns[design].border} p-2 rounded`}
+          className={`flex flex-col gap-1 border ${colorDesigns[design].border} p-2 rounded xl:w-96`}
         >
           <h2
-            className={`text-center text-3xl font-black uppercase mb-2 ${colorDesigns[design].title}`}
+            className={`text-center text-3xl lg:text-4xl font-black uppercase mb-2 ${colorDesigns[design].title}`}
           >
             Certificates
           </h2>
           <h3
-            className={`text-xl font-semibold ${colorDesigns[design].subtitle}`}
+            className={`text-xl lg:text-2xl font-semibold ${colorDesigns[design].subtitle}`}
           >
             Microverse - Full Stack
           </h3>

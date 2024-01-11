@@ -7,7 +7,7 @@ function Comeback({ design }) {
     <>
       <Link
         to="/"
-        className={`absolute top-1 left-1 p-1 rounded text-sm font-semibold ${design.subtitle} border ${design.border}`}
+        className={`absolute top-1 left-1 p-1 rounded text-sm md:text-lg font-semibold ${design.subtitle} border ${design.border}`}
       >
         {leftArrow} Go Back
       </Link>

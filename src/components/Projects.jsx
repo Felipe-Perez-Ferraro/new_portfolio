@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { colorDesigns } from '../colorDesigns';
 import Comeback from './Comeback';
 import Designs from './Designs';
@@ -8,15 +8,12 @@ import { leftArrow, rightArrow } from '../icons';
 
 function Projects({ design, handleButtonClick }) {
   const [page, setPage] = useState(0);
-  const [filterData, setFilterData] = useState();
   const n = 2;
 
-  useEffect(() => {
-    setFilterData(
-      projects.filter((item, index) => {
-        return (index >= page * n) & (index < (page + 1) * n);
-      })
-    );
+  const filterData = useMemo(() => {
+    return projects.filter((item, index) => {
+      return (index >= page * n) & (index < (page + 1) * n);
+    });
   }, [page]);
 
   return (
@@ -24,63 +21,62 @@ function Projects({ design, handleButtonClick }) {
       className={`flex flex-col gap-6 justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Comeback design={colorDesigns[design]} />
-      <article className="flex flex-col mx-auto max-w-xs gap-4">
-        <h2
-          className={`text-4xl text-center uppercase font-black ${colorDesigns[design].title}`}
-        >
-          Projects
-        </h2>
-        <div className={`flex flex-col gap-2`}>
-          {filterData &&
-            filterData.map((pro) => (
-              <div
-                className={`flex flex-col gap-2 border ${colorDesigns[design].border} rounded p-1 w-full`}
-                key={pro.id}
+      {filterData && filterData.length > 0 && (
+        <article className="flex flex-col max-w-xs xl:max-w-screen-xl mx-auto gap-4">
+          <h2
+            className={`text-4xl text-center uppercase font-black ${colorDesigns[design].title}`}
+          >
+            Projects
+          </h2>
+          {filterData.map((pro) => (
+            <div
+              className={`flex flex-col gap-2 border ${colorDesigns[design].border} rounded p-1 xl:w-96`}
+              key={pro.id}
+            >
+              <figure>
+                <img
+                  src={pro.img}
+                  alt="project image"
+                  className="rounded h-36 w-full"
+                />
+              </figure>
+              <h2
+                className={`text-lg font-bold text-center ${colorDesigns[design].subtitle}`}
               >
-                <figure>
-                  <img
-                    src={pro.img}
-                    alt="project image"
-                    className="rounded h-36 w-full"
-                  />
-                </figure>
-                <h2
-                  className={`text-lg font-bold text-center ${colorDesigns[design].subtitle}`}
-                >
-                  {pro.name}
-                </h2>
-                {pro.pairProgramming ? (
-                  <p className={`font-semibold ${colorDesigns[design].text}`}>
-                    Pair Programming: Yes
-                  </p>
-                ) : (
-                  <p className={`font-semibold ${colorDesigns[design].text}`}>
-                    Pair Programming: No
-                  </p>
-                )}
-                <ul className="flex gap-3">
-                  {pro.tech.map((t, idx) => (
-                    <li
-                      className={`font-semibold ${colorDesigns[design].linkBg} ${colorDesigns[design].text} px-1 rounded-lg`}
-                      key={idx}
-                    >
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex justify-center mt-2">
-                  <a
-                    href={pro.githubLink}
-                    target="_blank"
-                    className={`font-bold ${colorDesigns[design].paragraph}`}
+                {pro.name}
+              </h2>
+              {pro.pairProgramming ? (
+                <p className={`font-semibold ${colorDesigns[design].text}`}>
+                  Pair Programming: Yes
+                </p>
+              ) : (
+                <p className={`font-semibold ${colorDesigns[design].text}`}>
+                  Pair Programming: No
+                </p>
+              )}
+              <ul className="flex gap-3">
+                {pro.tech.map((t, idx) => (
+                  <li
+                    className={`font-semibold ${colorDesigns[design].linkBg} ${colorDesigns[design].text} px-1 rounded-lg`}
+                    key={idx}
                   >
-                    See Code
-                  </a>
-                </div>
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex justify-center mt-2">
+                <a
+                  href={pro.githubLink}
+                  target="_blank"
+                  className={`font-bold ${colorDesigns[design].paragraph}`}
+                >
+                  See Code
+                </a>
               </div>
-            ))}
-        </div>
-      </article>
+            </div>
+          ))}
+        </article>
+      )}
       <ReactPaginate
         className="flex gap-5"
         activeClassName="active"
