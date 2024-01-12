@@ -12,8 +12,8 @@ function Home({ design, handleButtonClick }) {
       className={`flex justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Links design={colorDesigns[design]} />
-      <motion.article initial={{scale: 0}} animate={{scale: 1}}>
-        <motion.div
+      <article initial={{scale: 0}} animate={{scale: 1}}>
+        <div
           className="cursor-pointer"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -34,14 +34,14 @@ function Home({ design, handleButtonClick }) {
           >
             Full Stack Developer
           </h3>
-        </motion.div>
+        </div>
         <div className="my-7">
           <Social design={colorDesigns[design]} />
         </div>
         <div className="flex justify-center mt-10 gap-3">
           <Designs handleButtonClick={handleButtonClick} />
         </div>
-      </motion.article>
+      </article>
     </section>
   );
 }
