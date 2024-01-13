@@ -41,8 +41,8 @@ function Projects({ design }) {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -300, opacity: 0 }}
         transition={{
-          x: { type: "spring", stiffness: 300, damping: 40 },
-          opacity: { duration: 0.2 }
+          x: { type: 'spring', stiffness: 300, damping: 40 },
+          opacity: { duration: 0.2 },
         }}
       >
         <Comeback design={colorDesigns[design]} />

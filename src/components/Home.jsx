@@ -6,13 +6,12 @@ import Social from './Social';
 import { motion } from 'framer-motion';
 
 function Home({ design, handleButtonClick }) {
-
   return (
     <section
       className={`flex justify-center items-center h-screen ${colorDesigns[design].background}`}
     >
       <Links design={colorDesigns[design]} />
-      <motion.article initial={{scale: 0}} animate={{scale: 1}}>
+      <motion.article initial={{ scale: 0 }} animate={{ scale: 1 }}>
         <motion.div
           className="cursor-pointer"
           drag="x"

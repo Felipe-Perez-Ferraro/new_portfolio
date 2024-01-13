@@ -3,9 +3,7 @@ import { colorDesigns } from '../colorDesigns';
 
 const Layout = ({ children, design }) => {
   return (
-      <main className={`${colorDesigns[design].background}`}>
-        {children}
-      </main>
+    <main className={`${colorDesigns[design].background}`}>{children}</main>
   );
 };
 

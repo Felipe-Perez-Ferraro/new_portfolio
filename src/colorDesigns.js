@@ -7,7 +7,7 @@ export const colorDesigns = {
     text: 'text-teal-100',
     border: 'border-amber-400',
     linkBg: 'bg-teal-900',
-    hov: 'bg-sky-700'
+    hov: 'bg-sky-700',
   },
   designTwo: {
     background: 'bg-orange-100',
@@ -17,7 +17,7 @@ export const colorDesigns = {
     text: 'text-amber-800',
     border: 'border-orange-950',
     linkBg: 'bg-amber-200',
-    hov: 'bg-orange-300'
+    hov: 'bg-orange-300',
   },
   designThree: {
     background: 'bg-violet-950',

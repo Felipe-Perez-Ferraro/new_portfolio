@@ -23,7 +23,11 @@ function Popup({ index, close, design }) {
       </h2>
       <figcaption>
         <figure>
-          <img src={index.img} className="rounded h-[180px] md:h-auto w-full" alt="Project" />
+          <img
+            src={index.img}
+            className="rounded h-[180px] md:h-auto w-full"
+            alt="Project"
+          />
         </figure>
       </figcaption>
       <ul className="flex gap-2">
