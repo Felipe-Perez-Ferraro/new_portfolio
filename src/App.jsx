@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import { useState } from 'react';
+import Layout from './components/Layout';
 
 function App() {
   const [design, setDesign] = useState('designOne');
@@ -14,40 +15,22 @@ function App() {
   };
 
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home design={design} handleButtonClick={handleButtonClick} />
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <About design={design} handleButtonClick={handleButtonClick} />
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <Projects design={design} handleButtonClick={handleButtonClick} />
-          }
-        />
-        <Route
-          path="/education"
-          element={
-            <Education design={design} handleButtonClick={handleButtonClick} />
-          }
-        />
-        <Route
-          path="/skills"
-          element={
-            <Skills design={design} handleButtonClick={handleButtonClick} />
-          }
-        />
-      </Routes>
-    </Router>
+    <Layout design={design}>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home design={design} handleButtonClick={handleButtonClick} />
+            }
+          />
+          <Route path="/about" element={<About design={design} />} />
+          <Route path="/projects" element={<Projects design={design} />} />
+          <Route path="/education" element={<Education design={design} />} />
+          <Route path="/skills" element={<Skills design={design} />} />
+        </Routes>
+      </Router>
+    </Layout>
   );
 }
 
